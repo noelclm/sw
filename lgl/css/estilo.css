@@ -1,0 +1,521 @@
+/*
+	Practica LGL: Pagina par la asignatura SW
+    Copyright (C) 2015  
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/*Fuente propia para el nombre de la pagina*/
+@font-face {
+    font-family: 'battle_beastsnormal';
+    src: url('battle_beasts-webfont.eot');
+    src: url('battle_beasts-webfont.eot?#iefix') format('embedded-opentype'),
+         url('battle_beasts-webfont.woff') format('woff'),
+         url('battle_beasts-webfont.ttf') format('truetype'),
+         url('battle_beasts-webfont.svg#battle_beastsnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Estilo de la pagina*/
+body {
+	background-color:#FFF;
+	background-image:url(../imagenes/fondo.jpg);
+	background-attachment:fixed;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: top;
+	font-family: "Lucida Sans Unicode";
+}
+
+/*Para el div que crea un separador*/
+.clear{     
+	clear: both;
+    height: 0;
+}
+
+/*Menu tipo bootstrap*/
+.navbar-inverse {
+    background-color: #fff;
+	height: 103px;
+	background: rgba(223,223,223,0.8);
+	border-radius: 10px;
+	margin: 20px auto;
+	box-shadow: 0px 0px 5px  2px #777;
+	color: #fff;
+	border-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #000;
+    background-color: rgba(223,223,223,0.0);
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF;
+	background-color: rgba(0,0,0,0.8);
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #FFF;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	color: #FFF;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.navbar-collapse {
+    border-top:transparent;
+	padding: 30px;
+	margin-top: 0px;
+}
+
+/*Menu añadido*/
+li input{
+	margin-top: 0px;
+	height: 50px;
+	width: 70px;
+	border-radius: 0px;
+	border: none;
+	background:rgba(255, 255, 255, 0.8);
+}
+
+li input[type="submit"]{
+	background:rgba(0, 0, 0, 0.8);
+	border-radius: 0px;
+}
+
+li input[type="search"]{
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #000;
+	border-radius: 0px;
+}
+
+li input[type="submit"]:hover{
+	color: #000;
+	background:rgba(255, 255, 255, 0.0);
+	text-shadow: none;
+	box-shadow:none;
+}
+
+/*formulario de logeo*/
+#user form{
+	width: 250px;
+	margin-top:-35px;
+	margin-right:-20px;
+	background:none;
+	box-shadow:none;
+	border:none;
+}
+
+@media (min-width: 768px){
+	#user form{
+		margin-top:0px;
+		margin-right:-25px;
+		width: 650px;
+	}
+	.navbar-inverse{
+		height:130px;
+	}
+}
+
+@media (min-width: 992px){
+	#user form{
+		margin-top:-65px;
+		margin-right:20px;
+		width: 250px;
+	}
+	.navbar-inverse{
+		height:103px;
+	}
+}
+
+#user form [type="text"]{
+	width:150px;	
+}
+
+#user form [type="password"]{
+	width:150px;	
+}
+
+#user form [type="submit"]{
+	width: 50px;
+	height: 25px;
+	padding-right: 40px;
+	/*padding-left: -3px;*/
+}
+
+#user {
+    float: right;
+}
+
+#user a{
+    color: #900;
+    font-size: 12px;
+	text-decoration:none;
+}
+
+/*Modificacion cabecera para usuarios registrados*/
+
+#userOpt{
+	color: #900;
+    font-size: 12px;
+    margin-left: 4px;
+	margin-top: 32px;
+	float: left;
+}
+
+@media (min-width: 768px){
+	#userOpt{
+		margin-top: 0px;
+	}
+}
+
+#userOpt a{
+	color: #900;
+    font-size: 12px;
+	text-decoration:none;
+	
+}
+
+/*mensajes nuevos*/
+.user_reg_msg{
+	width:35px;
+	height: 35px;
+	margin-top: -9px;
+}
+
+.link_msg_nuevos {
+	color: #000;
+}
+
+/*Estilos de los h*/
+h2{
+    border-bottom:1px solid #000;
+    padding-left: 5px;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 0px 0px rgba(231,231,231,0.75);
+    text-shadow: 1px 1px 0px rgba(238, 238, 238, 1);
+}
+
+h2, h3{
+	color: #000;
+}
+
+/*Estilo de las secciones de la pagina*/
+article {
+	background: rgba(223,223,223,0.8);
+	box-shadow: 0px 0px 5px  2px #777;
+	color: #FFF;
+	padding: 5px 10px;
+	margin: 20px 0px;
+	border-radius: 10px;
+	min-height: 400px;
+}
+
+article img {
+	padding-right: 10px;
+	margin-left: -10px;
+}
+
+article p , article ul, form{
+	text-align: justify;
+	font-size:14px;
+	background: rgba(99, 99, 99, 1);
+	padding: 5px 20px;
+	box-shadow: 0px 0px 5px #333;
+	border-radius: 5px;
+	line-height: 20px;
+	border: 1px solid #464646;
+	overflow:auto;
+}
+
+article p a{
+	color:#FFF;
+	text-decoration: underline;	
+}
+
+article p a:hover{
+	color:#900;	
+}
+
+article span{
+	font-family: 'battle_beastsnormal';
+	font-size:30px;
+}
+
+input[name="web"]{
+	width:200px;
+}
+
+.selectType {
+	width:80px;
+	color:#000;
+	padding:3px;
+}
+
+/*Galeria*/
+#contGaleria {
+	margin-top:10px;
+	margin-left:10px;
+}
+
+.galeriaPeq {
+	width:100px;
+	height:70px;
+	margin-bottom:5px;
+}
+
+.galeriaGrande{
+	width:150px;
+	height:100px;
+	margin-bottom:5px;
+}
+
+#coment_img{
+width: 100%;
+max-height:700px;
+}
+
+
+/*Estilo pie de pagina*/
+footer {
+	color: #000;
+	padding: 10px 50px;
+	width: 100%;
+	font-size: 10px;
+	text-align: center;
+}
+
+/*Estilo para formularios*/
+label, input[type="button"]{
+	margin: 15px 0 5px 0;
+}
+
+textarea {
+	max-width: 100%;
+	max-height: 100px;
+	color: #000;
+}
+
+input{
+    margin: 0;
+    padding: 3px;
+    border-radius: 3px;
+   	border: 1px solid #444;
+	color:#000;
+}
+
+input[type="submit"]{
+    padding: 3px 10px;
+    margin: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+   	background: #000;
+}
+
+input[type="submit"]:hover{
+	color: #FFF;
+	box-shadow: 0px 0px 3px #FFF;
+	text-shadow: 0px 0px 4px #f00;
+}
+
+input[type="file"]{
+cursor:pointer; 
+display: inline;
+color:#FFF;
+}
+
+#mod_audio a{
+color:#FFF;
+}
+
+#borrar_noticia {
+	text-align: justify;
+	font-size:14px;
+	background: rgba(99, 99, 99, 0);
+	padding: 0px 0px;
+	box-shadow: none;
+	border: 0px;
+	overflow:auto;
+	width:100%;
+}
+
+/*insertar comentarios en mensajes*/
+.add_comment {
+	padding: 3px 10px;
+	margin: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	background: #000;
+	color: #FFF;
+}
+
+.add_comment_invisibility{
+	display: none;
+}	
+
+.add_comment_button {
+	padding: 3px 10px;
+	margin: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	background: #000;
+	color: #FFF;
+}
+
+#add_coment_submit{
+	padding: 3px 10px;
+	margin: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	background: #000;
+	color: #FFF;
+}
+
+/*editar imagenes*/
+#form_del_img {
+	background-color:rgba(99, 99, 99, 0);
+	padding: 0px 0px;
+	box-shadow: none;
+	border: 0px;
+	overflow:auto;
+}
+
+#contImagen {
+	float:left;
+	margin-right: 5px;
+	margin-bottom: 20px;
+}
+
+#botton_borrar_img {
+	margin-left:15px;}
+
+#col_img {
+text-align: left;
+}
+
+details{
+color:#000;
+}
+
+details p {
+color:#FFF;
+}
+
+
+/*estilo menu usuario*/
+#menu {
+	margin-top:18px;
+}
+
+#menu h2{
+	padding-bottom:19px;
+}
+
+#menu a {
+cursor:pointer;
+}
+
+#menu a p{
+	color: #FFF;
+	text-decoration: none;
+}
+
+#menu p:hover{
+	background:rgba(255, 255, 255, 0.0);
+	color: #000;
+}
+
+#menu a:hover{
+	text-shadow: none;
+	box-shadow:none;
+	text-decoration: none;
+}
+
+#datos{
+	width: 100%;
+}
+@media (min-width: 992px){
+	#datos{
+		width: 75%;
+	}
+	#menu {
+		width: inherit;
+		margin-right: 4%;
+		position:fixed;	
+	}
+	
+	#menu_user{
+		margin-left:75%;
+	}
+}
+
+.col-lg-10 {
+	width:100%;
+}
+
+/*estilo menu conocenos*/
+#containermenu{
+	float: none;
+	width:100%;
+}
+#menu-c a {
+	cursor:pointer;
+	
+}
+#menu-c {
+	margin-top:18px;
+	position: none;
+}
+
+#menu-c h2{
+	padding-bottom:0px;
+}
+
+#menu-c a p{
+	color: #FFF;
+	text-decoration: none;
+}
+
+#menu-c p:hover{
+	background:rgba(255, 255, 255, 0.0);
+	color: #000;
+}
+
+#menu-c a:hover{
+	text-shadow: none;
+	box-shadow:none;
+	text-decoration: none;
+}
+
+@media (min-width: 992px){
+	#containermenu {
+		float: right;
+		width: inherit;
+		margin-right: 25%;
+	}
+	#menu-c {
+		margin-top:0px;
+		width: inherit;
+		position: fixed;
+	}
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:-80px;
+}
