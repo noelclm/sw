@@ -1,0 +1,196 @@
+
+/*
+	Practica ValoRest: Pagina par la asignatura SW
+    Copyright (C) 2016  
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+@font-face {
+    font-family: "conthrax-sb";
+    src: url(conthrax-sb.ttf) format("truetype");
+}
+
+body{
+    font-family: "verdana", Arial;
+    background-color: #F2F2F2;
+}
+
+header{
+    background-color: #0088cc;
+    color: white;
+}
+
+footer{
+    font-size: 10px;
+    text-align: center;
+    border-top: 1px solid #E0E0E0;
+    box-shadow: 0px -1px 7px #AAA;
+    background: #3E464C;
+    color: white;
+}
+
+fieldset {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 20em;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+label {
+    width: 8em;
+    float: left;
+    text-align: right;
+    margin-right: 0.5em;
+    display: block;
+}
+
+button {
+    margin-left: 140px;
+} 
+
+article{
+    margin-top: 20px;
+    text-align: justify;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+h1{
+    font-family: "conthrax-sb";
+    font-size: 35px;
+    text-shadow: 0px 2px 3px #555;
+}
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active{
+    text-decoration: none;
+    color: white;
+}
+
+h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+h2 a:link, h2 a:visited, h2 a:hover, h2 a:active{
+    text-decoration: none;
+}
+
+h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+h3 a:link, h3 a:visited, h3 a:hover, h3 a:active{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    font-size: 12px;
+    margin: 10px;
+    text-align: justify;
+}
+
+p a:link, p a:visited, p a:hover, p a:active{
+    text-decoration: underline;
+    color: black;
+}
+
+#logo a{
+    height: 60px;
+    line-height: 60px;
+}
+
+.img100{
+    width: 100%;
+    height: auto;
+}
+
+.font-size10{
+    font-size: 10px;
+}
+
+.center-800{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+}
+
+.container{
+    margin-top: 20px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.marginH2{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.marginV2{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.paddingV2{
+    padding-top: 2%;
+    margin-bottom: 2%;
+}
+
+.height400{
+    height: 400px;
+}
+
+.height450{
+    height: 450px;
+}
+
+.height700{
+    height: 700px;
+}
+
+@media (min-width: 992px) {
+
+    
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    #logo{
+        padding-left: 10px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #logo{
+        padding-left: 10px;
+    }
+
+}

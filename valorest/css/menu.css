@@ -1,0 +1,123 @@
+
+/*
+	Practica ValoRest: Pagina par la asignatura SW
+    Copyright (C) 2016  
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* Quitamos estilos por defecto de el tag UL */
+#menu ul{
+    list-style: none;
+    font-size: 14px;
+}
+    
+/* Centramos y ponemos los textos en mayuscula */
+#menu li{
+   display: block;
+   float: left;
+   text-transform: uppercase;
+   text-align: center;
+   height: 60px;
+}
+    
+/* Damos estilo a nuestros enlaces */
+#menu li a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+#menu li a:hover{
+    background: #36c4ff;
+}
+
+#menu-active{
+    background: #00b4ff;
+}
+  
+/* Estilos #nav-mobile y lo ocultamos */
+#nav-mobile{
+    display: none;
+    background: url(../img/nav.png) no-repeat center center;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top:0;
+    opacity: .6;
+
+}   
+/* Agregaremos esta clase a #nav-mobile, cuando el menu mobile haya sido desplegado */
+#nav-mobile.nav-active{
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+
+    #menu ul{
+        font-size: 13px;
+    }
+
+    #menu li a{
+        padding: 0 13px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* mostramos #nav-mobile */
+    #nav-mobile{ display: block; }
+
+    /* Fijamos nuestro nav en 100% ancho y dejamos de flotarlo  */
+    #menu{
+        width: 100%;
+        float: none;
+        padding-top: 60px;
+    }
+    /* Convertimos nuestra lista de enlaces en un menú horizontal */
+    #menu ul{
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        max-height: 0;
+        overflow: hidden;
+    }
+    /* estilos para los LI del menu */
+    #menu li{
+        background: #33363b;
+        border-bottom: 1px solid #282b30;
+        float: none;
+    }
+
+    /* Quitamos el borde del ultimo item del menú */
+    #menu li:last-child{ border-bottom: 0;}
+        #menu li a{
+            padding: 15px 0;
+            height: auto;
+            line-height: normal;
+        }
+        #menu li a:hover{background:#2a2d33}
+
+    /* Agregamos una animación al despligue del menú */
+    #menu ul.open-menu{
+        max-height: 400px;
+        -webkit-transition: max-height .4s;
+        -moz-transition: max-height .4s;
+        -ms-transition: max-height .4s;
+        -o-transition: max-height .4s;
+        transition: max-height .4s;
+    }
+}

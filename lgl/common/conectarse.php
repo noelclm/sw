@@ -15,7 +15,7 @@
 <?php
 
 function Conectarse() {
-    if (!($link = mysql_connect("localgrouplinked.es.mysql", "localgrouplinke", "68KzAP5m"))) {
+    if (!($link = mysql_connect("server", "user", "password"))) {
 		$_SESSION["errorReg"] = "Error conectando a la base de datos. Intentelo de nuevo más tarde. Si el error persiste pongase en contacto con el administrador de la página en la sección de contacto.";
 		header('location:../wrong.php');
     }

@@ -1,0 +1,59 @@
+header {
+    height: 10%;
+    background-color: lightblue;
+}
+#principal {
+    min-height: 80%;
+}
+nav {
+    background-color: lightgray;
+    height: 20%;
+}
+article {
+    background-color: lemonchiffon;
+    min-height: 80%
+}
+aside {
+    background-color: lightsalmon;
+    height: 20%;
+}
+footer{
+    background-color: lightgreen;
+    height: 5%;
+}
+.row:after {
+    clear: both;
+}
+.col-movil-12 {
+}
+@media (min-width: 640px) {
+    .row {
+        -webkit-column-count: 12; /* Chrome, Safari, Opera */
+        -moz-column-count: 12; /* Firefox */
+        column-count: 12;
+        -webkit-column-gap: 0px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 0px; /* Firefox */
+        column-gap: 0px;
+    }
+    .col-escritorio-2, .col-escritorio-8, .col-escritorio-12 {
+
+    }
+    .col-escritorio-12 {
+        -webkit-column-span: all; /* Chrome, Safari, Opera */
+        -moz-column-span: all; /* Firefox */
+        column-span: all;    
+    }
+    .col-escritorio-8 {
+        -webkit-column-span: 8; /* Chrome, Safari, Opera */
+        -moz-column-span: 8; /* Firefox */
+        column-span: 8;
+    }
+    .col-escritorio-2 {
+        -webkit-column-span: 2; /* Chrome, Safari, Opera */
+        -moz-column-span: 2; /* Firefox */
+        column-span: 2;
+    }
+    nav, aside {
+        height: 80%;
+    }
+}
